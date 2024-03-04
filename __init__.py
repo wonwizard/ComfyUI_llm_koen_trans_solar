@@ -1,5 +1,5 @@
 from .node_solar_koen import *
-from .showtext_node import *
+from .node_showtext import *
 
 NODE_CLASS_MAPPINGS = {
     "LLMTrans": LLMTrans,
