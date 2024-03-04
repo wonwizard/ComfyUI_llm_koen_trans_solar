@@ -15,6 +15,7 @@ class LLMTrans:
     def INPUT_TYPES(s):
         return {
             "required": {
+                "clip": ("CLIP", ),
                 "input_field": ("STRING", {
                     "multiline": True, #True if you want the field to look like the one on the ClipTextEncode node
                     "default": " "
@@ -30,7 +31,7 @@ class LLMTrans:
 
     CATEGORY = "utils"
 
-    def run(self, input_field, transed_field, trans_type):
+    def run(self, input_field, trans_type):
 
         client = OpenAI(
         api_key="HMG6GMDhUHXuiXjhSB4UpHS8SPI8w153",    #Beta access token
