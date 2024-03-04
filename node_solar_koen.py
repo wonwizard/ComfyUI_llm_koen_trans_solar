@@ -68,7 +68,8 @@ class LLMTrans:
         for chunk in stream:
           if chunk.choices[0].delta.content is not None:
             #print(chunk.choices[0].delta.content, end="")
-            out_str = chunk.choices[0].delta.content
+            tmp_str = chunk.choices[0].delta.content
+            out_str = tmp_str.replace("\n", " ")  
             print(out_str)  
 
         # Use with stream=False
