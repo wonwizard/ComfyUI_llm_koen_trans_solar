@@ -3,7 +3,7 @@ class ShowText:
     def INPUT_TYPES(s):
         return {
             "required": {
-                "text": ("STRING", {"multiline": True}),
+                "text": ("STRING", {"multiline": True, "forceInput": True}),
             },
         }
 
