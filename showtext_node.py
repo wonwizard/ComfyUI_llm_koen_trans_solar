@@ -11,11 +11,14 @@ class ShowText:
             },
         }
 
+    INPUT_IS_LIST = True
     RETURN_TYPES = ("STRING",)
     
     FUNCTION = "run"
+    OUTPUT_NODE = True
+    OUTPUT_IS_LIST = (True,)
     CATEGORY = "LLM Translate"
-
+    
     def run(self, text, string_field):
         
         return {"ui": {"text": text}, "result": (text,)}
