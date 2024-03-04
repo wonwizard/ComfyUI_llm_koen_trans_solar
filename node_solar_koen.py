@@ -15,7 +15,6 @@ class LLMTrans:
     def INPUT_TYPES(s):
         return {
             "required": {
-                "clip": ("CLIP", ),
                 "input_field": ("STRING", {
                     "multiline": True, #True if you want the field to look like the one on the ClipTextEncode node
                     "default": " "
