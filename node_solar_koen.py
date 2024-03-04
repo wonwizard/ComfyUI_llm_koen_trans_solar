@@ -18,17 +18,13 @@ class LLMTrans:
                 "input_field": ("STRING", {
                     "multiline": True, #True if you want the field to look like the one on the ClipTextEncode node
                     "default": " "
-                }),    
-                "transed_field": ("STRING", {
-                    "multiline": True, #True if you want the field to look like the one on the ClipTextEncode node
-                    "default": " "
                 }),
                 "trans_type": (["Ko2En","En2Ko"],)
             }
         }
 
-    RETURN_TYPES = ("STRING")
-    RETURN_NAMES = ("Transed_String")
+    RETURN_TYPES = ("STRING",)
+    RETURN_NAMES = ("Transed_String",)
 
     FUNCTION = "run"
 
@@ -78,7 +74,7 @@ class LLMTrans:
         # print(stream.choices[0].message.content)
         
         # Return 
-        return (out_str)
+        return (out_str,)
     
 NODE_CLASS_MAPPINGS = {
     "LLMTrans": LLMTrans
