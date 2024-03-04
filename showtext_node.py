@@ -7,11 +7,12 @@ class ShowText:
             },
         }
 
-
+    INPUT_IS_LIST = True
     RETURN_TYPES = ("STRING",)
+    OUTPUT_NODE = True
+    OUTPUT_IS_LIST = (True,)
 
     FUNCTION = "run"
-
     CATEGORY = "LLM Translate"
 
     def run(self, text):
