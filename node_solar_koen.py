@@ -39,7 +39,7 @@ class LLMTrans:
 
         #lnw add, 입력 받기
         #print ("Input strings:")
-        input_str = string_field
+        input_str = input_field
 
         if trans_type == Ko2En:
             model_type="solar-1-mini-translate-koen"
