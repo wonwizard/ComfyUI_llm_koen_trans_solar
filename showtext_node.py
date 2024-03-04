@@ -4,10 +4,6 @@ class ShowText:
         return {
             "required": {
                 "text": ("STRING", {"forceInput": True}),
-                "string_field": ("STRING", {
-                    "multiline": True, #True if you want the field to look like the one on the ClipTextEncode node
-                    "default": ""
-                }),    
             },
             "hidden": {
                 "unique_id": "UNIQUE_ID",
@@ -23,7 +19,7 @@ class ShowText:
     
     CATEGORY = "LLM Translate"
     
-    def run(self, text, string_field, unique_id = None, extra_pnginfo=None):
+    def run(self, text, unique_id = None, extra_pnginfo=None):
         if unique_id and extra_pnginfo and "workflow" in extra_pnginfo[0]:
             workflow = extra_pnginfo[0]["workflow"]
             node = next((x for x in workflow["nodes"] if str(x["id"]) == unique_id[0]), None)
