@@ -41,8 +41,7 @@ class LLMTrans:
         #print ("Input strings:")
         input_str = input_field
 
-        print(trans_type)
-        if trans_type == Ko2En:
+        if trans_type == "Ko2En":
             model_type="solar-1-mini-translate-koen"
         else:
             model_type="solar-1-mini-translate-enko"
