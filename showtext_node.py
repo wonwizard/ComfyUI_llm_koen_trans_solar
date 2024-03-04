@@ -18,7 +18,7 @@ class ShowText:
 
     def run(self, text, string_field):
         
-        return {"ui": {"text": text}, "result": (text,)}
+        return {"ui": {"string_field": text}, "result": (text,)}
 
 
 NODE_CLASS_MAPPINGS = {
