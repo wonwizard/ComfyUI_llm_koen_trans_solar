@@ -28,7 +28,7 @@ class LLMTrans:
 
     FUNCTION = "run"
 
-    CATEGORY = "utils"
+    CATEGORY = "LLM Translate"
 
     def run(self, input_field, trans_type):
 
