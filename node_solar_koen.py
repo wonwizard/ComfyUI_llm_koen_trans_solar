@@ -70,7 +70,7 @@ class LLMTrans:
             #print(chunk.choices[0].delta.content, end="")
             tmp_str = chunk.choices[0].delta.content
             out_str = tmp_str.replace("\n", " ")  
-            print(out_str)  
+            print(tmp_str, out_str)  
 
         # Use with stream=False
         # print(stream.choices[0].message.content)
