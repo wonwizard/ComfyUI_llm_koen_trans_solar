@@ -2,7 +2,7 @@ class LLM_CLIPTextEncode:
     @classmethod
     def INPUT_TYPES(s):
         return {"required": 
-                {"text": ("STRING", {"multiline": True, }), 
+                {"text": ("STRING", {"multiline": True, "default": ""}), 
                  "intext": ("STRING", {"forceInput": True}),    
                  "clip": ("CLIP", )}
                  }
