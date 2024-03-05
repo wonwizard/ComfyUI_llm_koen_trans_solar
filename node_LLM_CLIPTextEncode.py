@@ -11,7 +11,8 @@ class LLM_CLIPTextEncode:
 
     CATEGORY = "LLM Translate"
 
-    def encode(self, clip, text):
+    def encode(self, intext, clip, text):
+        text = intext
         tokens = clip.tokenize(text)
         cond, pooled = clip.encode_from_tokens(tokens, return_pooled=True)
         return ([[cond, {"pooled_output": pooled}]], )
