@@ -19,7 +19,7 @@ class LLMTrans:
                     "multiline": True, #True if you want the field to look like the one on the ClipTextEncode node
                     "default": "아름다운 풍경 자연 유리 병 풍경, 보라색 은하 병,"
                 }),
-                "trans_type": (["Ko2En","En2Ko"],)
+                "trans_type": (["Solar Ko2En","Solar En2Ko"],)
             }
         }
 
@@ -41,9 +41,9 @@ class LLMTrans:
         #print ("Input strings:")
         input_str = input_field
 
-        if trans_type == "Ko2En":
+        if trans_type == "Solar Ko2En":
             model_type="solar-1-mini-translate-koen"
-        else:
+        elif trans_type == "Solar En2Ko" :
             model_type="solar-1-mini-translate-enko"
 
         stream = client.chat.completions.create(
