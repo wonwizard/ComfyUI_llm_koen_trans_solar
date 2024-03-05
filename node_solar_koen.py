@@ -17,7 +17,7 @@ class LLMTrans:
             "required": {
                 "input_field": ("STRING", {
                     "multiline": True, #True if you want the field to look like the one on the ClipTextEncode node
-                    "default": " "
+                    "default": "아름다운 풍경 자연 유리 병 풍경, 보라색 은하 병,"
                 }),
                 "trans_type": (["Ko2En","En2Ko"],)
             }
