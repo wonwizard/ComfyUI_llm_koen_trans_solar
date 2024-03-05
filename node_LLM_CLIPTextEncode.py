@@ -2,8 +2,8 @@ class LLM_CLIPTextEncode:
     @classmethod
     def INPUT_TYPES(s):
         return {"required": 
-                {"intext": ("STRING",  {"multiline": True, "forceInput": True}), 
-                 "text": ("STRING", {"multiline": True, "forceInput": True}), 
+                {"intext": ("STRING", {"forceInput": True}), 
+                 "text": ("STRING", {"multiline": True}), 
                  "clip": ("CLIP", )}
                  }
     RETURN_TYPES = ("CONDITIONING",)
@@ -12,10 +12,11 @@ class LLM_CLIPTextEncode:
     CATEGORY = "LLM Translate"
 
     def encode(self, intext, clip, text):
-        text = intext
+        text = intext + text
         tokens = clip.tokenize(text)
         cond, pooled = clip.encode_from_tokens(tokens, return_pooled=True)
-        return ([[cond, {"pooled_output": pooled}]], )
+        #return ([[cond, {"pooled_output": pooled}]], )
+        return {"ui": {"text": text}, "result": ([[cond, {"pooled_output": pooled}]], )}
 
 NODE_CLASS_MAPPINGS = {
     "LLM_CLIPTextEncode": LLM_CLIPTextEncode,
