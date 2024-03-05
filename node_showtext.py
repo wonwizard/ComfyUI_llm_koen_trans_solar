@@ -17,7 +17,7 @@ class ShowText:
     OUTPUT_NODE = True
     OUTPUT_IS_LIST = (True,)
 
-    CATEGORY = "utils"
+    CATEGORY = "LLM Translate"
 
     def notify(self, text, unique_id = None, extra_pnginfo=None):
         if unique_id and extra_pnginfo and "workflow" in extra_pnginfo[0]:
