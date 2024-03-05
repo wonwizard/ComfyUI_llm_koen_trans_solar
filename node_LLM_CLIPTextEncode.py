@@ -16,7 +16,7 @@ class LLM_CLIPTextEncode:
         tokens = clip.tokenize(text)
         cond, pooled = clip.encode_from_tokens(tokens, return_pooled=True)
         #return ([[cond, {"pooled_output": pooled}]], )
-        return {"ui": {"text": intext}, "result": ([[cond, {"pooled_output": pooled}]], )}
+        return {"ui": {"text": text}, "result": ([[cond, {"pooled_output": pooled}]], )}
 
 NODE_CLASS_MAPPINGS = {
     "LLM_CLIPTextEncode": LLM_CLIPTextEncode,
