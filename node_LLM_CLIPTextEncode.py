@@ -9,7 +9,7 @@ class LLM_CLIPTextEncode:
     RETURN_TYPES = ("CONDITIONING",)
     FUNCTION = "encode"
 
-    CATEGORY = "conditioning"
+    CATEGORY = "LLM Translate"
 
     def encode(self, clip, text):
         tokens = clip.tokenize(text)
