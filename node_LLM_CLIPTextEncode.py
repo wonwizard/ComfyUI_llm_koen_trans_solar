@@ -2,8 +2,8 @@ class LLM_CLIPTextEncode:
     @classmethod
     def INPUT_TYPES(s):
         return {"required": 
-                {"intext": ("STRING", {"forceInput": True}), 
-                 "text": ("STRING", {"multiline": True}), 
+                {"text": ("STRING", {"multiline": True, }), 
+                 "intext": ("STRING", {"forceInput": True}),    
                  "clip": ("CLIP", )}
                  }
     RETURN_TYPES = ("CONDITIONING",)
