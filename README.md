@@ -6,7 +6,7 @@ Solar API is the best Korean to English and English to Korean translate LLM API 
 
 Drag and drop the image below into ComfyUI and it will be automatically configured. 
 
-This can traslate Korean to Englidh and English and Korean.
+This can traslate Korean to English and English and Korean.
 
 This is a beta API, so you'll need to register for the full API later.
 
