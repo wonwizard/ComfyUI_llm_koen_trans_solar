@@ -11,7 +11,7 @@ It can translate Korean to English as well as English to Korean.
 This is a beta API, so you'll need to register for the full API later.
 
 ## Usage 1 : Only View translated text 
-You copy and paste transed text to prompt(in CLIP text) and can change text
+You can copy and paste translated text to prompt(in CLIP text) and can change text
 
 ![example](./doc/llm_translate1.png)
 
