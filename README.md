@@ -4,7 +4,7 @@ This project is a ComfyUI version to Korean to English translattion prompt.
 
 Solar API is the best and fastest Korean to English translation LLM-based API by Upstage. 
 
-Drag and drop the image below into ComfyUI and it will be automatically configured. 
+Drag and drop the image below into ComfyUI and it will be automatically configured workflows. 
 
 It can translate Korean to English as well as English to Korean.
 
